@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Redirect if not logged in
+    if (!localStorage.getItem('authToken')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Dashboard</h1>
+    <button onclick="getProtected()">Access Protected Content</button>
+    <button onclick="logout()">Logout</button>
+    <div id="message"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
